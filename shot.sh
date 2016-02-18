@@ -116,7 +116,7 @@ fi
 # Merging screenshots...
 echo -n "Putting screenshots together..."
 cd /tmp/shots/
-montage -geometry +2+2 `ls *.png | sort -n` "$file_name".jpg
+montage -geometry +2+2 -tile 4x10 `ls *.png | sort -n` "$file_name".jpg
 mogrify -resize $res "$file_name".jpg
 echo " [OK]"
 echo -n "Getting video info..."
